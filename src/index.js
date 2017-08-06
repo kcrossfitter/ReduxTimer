@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import {
   BrowserRouter as Router,
@@ -25,7 +26,7 @@ window.Tether = Tether;
 require('bootstrap');
 
 const createStoreWithMiddleware =
-      applyMiddleware(logger)(createStore);
+      applyMiddleware(thunk, logger)(createStore);
 const store = createStoreWithMiddleware(
   reducers,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()

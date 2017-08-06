@@ -1,5 +1,9 @@
 import { combineReducers } from 'redux';
 
+import countdownReducer from './countdownReducer';
+import timerReducer from './timerReducer';
+
 export default combineReducers({
-  state: () => null
+  countdown: countdownReducer,
+  timer: timerReducer
 });
