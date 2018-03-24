@@ -9,6 +9,8 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
+import jQuery from 'jquery';
+import Popper from 'popper.js';
 
 import registerServiceWorker from './registerServiceWorker';
 
@@ -18,10 +20,8 @@ import Nav from './components/Nav';
 import Timer from './components/Timer';
 import Countdown from './components/Countdown';
 
-const jQuery = require('jquery');
-const Tether = require('tether');
-window.jQuery = jQuery;
-window.Tether = Tether;
+window.$ = window.jQuery = jQuery;
+window.Popper = Popper;
 
 require('bootstrap');
 

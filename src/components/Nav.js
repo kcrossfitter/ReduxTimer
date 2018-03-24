@@ -9,23 +9,24 @@ class Nav extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+      <nav className="navbar navbar-expand-md navbar-dark bg-dark">
+        <Link className="navbar-brand" to="/">Timer App</Link>
         <button
-          className="navbar-toggler navbar-toggler-right"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <Link className="navbar-brand" to="/">Timer App</Link>
+        
 
         <div
           className="collapse navbar-collapse"
-          id="navbarSupportedContent"
+          id="navbarNav"
         >
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
@@ -33,8 +34,7 @@ class Nav extends Component {
                 className="nav-link"
                 activeClassName="active"
                 activeStyle={activeStyle}
-                exact
-                to="/"
+                exact to="/"
               >
                 Timer
               </NavLink>
